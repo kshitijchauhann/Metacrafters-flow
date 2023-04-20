@@ -1,29 +1,29 @@
 pub contract Authentication {
 
-    pub var profiles: {Address: Profile}
+    pub var cars: {Address: Car}
     
-    pub struct Profile {
-        pub let firstName: String
-        pub let lastName: String
-        pub let birthday: String
+    pub struct Car {
+        pub let CompanyName: String
+        pub let ModelName: String
+        pub let Year: Int
         pub let account: Address
 
         // You have to pass in 4 arguments when creating this Struct.
-        init(_firstName: String, _lastName: String, _birthday: String, _account: Address) {
-            self.firstName = _firstName
-            self.lastName = _lastName
-            self.birthday = _birthday
+        init(_CompanyName: String, _ModelName: String, _Year: Int, _account: Address) {
+            self.CompanyName = _CompanyName
+            self.ModelName = _ModelName
+            self.Year = _Year
             self.account = _account
         }
     }
 
-    pub fun addProfile(firstName: String, lastName: String, birthday: String, account: Address) {
-        let newProfile = Profile(_firstName: firstName, _lastName: lastName, _birthday: birthday, _account: account)
-        self.profiles[account] = newProfile
+    pub fun CarOne(CompanyName: String, ModelName: String, Year: Int, account: Address) {
+        let CarTwo = Car(_CompanyName: CompanyName, _ModelName: ModelName, _Year: Year, _account: account)
+        self.cars[account] = CarTwo
     }
 
     init() {
-        self.profiles = {}
+        self.cars = {}
     }
 
 }
