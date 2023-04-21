@@ -1,4 +1,4 @@
-pub contract Authentication {
+pub contract CarDetails {
 
     pub var cars: {Address: Car}
     
