@@ -1,7 +1,7 @@
-import Authentication from 0x01
+import CarDetails from 0x01
 
-pub fun main(account: Address): Authentication.Car {
-    return Authentication.cars[account]!
+pub fun main(account: Address): CarDetails.Car {
+    return CarDetails.cars[account]!
 }
 
 
