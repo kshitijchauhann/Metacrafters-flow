@@ -1,3 +1,3 @@
 # Metacrafters-flow
 
-A smart contract to authenticate cars.
+A smart contract for storing car details.
